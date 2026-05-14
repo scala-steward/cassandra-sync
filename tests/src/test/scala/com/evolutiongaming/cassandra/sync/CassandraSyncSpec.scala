@@ -22,7 +22,7 @@ import org.scalatest.wordspec.AnyWordSpec
 class CassandraSyncSpec extends AnyWordSpec with BeforeAndAfterAll with Matchers {
   import CassandraSyncSpec._
   private lazy val cassandraContainer = CassandraContainer(
-    dockerImageNameOverride = DockerImageName.parse("cassandra:3.11.7"),
+    image = DockerImageName.parse("cassandra:3.11.7"),
   )
 
  // due to test structure we need to start the container before the test suite
